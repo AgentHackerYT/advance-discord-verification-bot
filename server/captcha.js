@@ -84,7 +84,7 @@ module.exports = {
             document.getElementById("submit").onclick = () =>{
             const input = document.getElementById("gg").value
             if(input.toLowerCase() == "${captcha.text.toLowerCase()}") {
-               window.location.href = "https://verificationpro.jenildobaria.repl.co/session/" + "${id}"
+               window.location.href = "yoururl/session/" + "${id}"
               }else{
 
                 alert("The Letters Doesn't match, try again")
