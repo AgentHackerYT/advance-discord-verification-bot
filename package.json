@@ -1,0 +1,17 @@
+{
+  "name": "vpro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^13.10.3",
+    "easymapdb": "^2.0.1-dev",
+    "express": "^4.18.1",
+    "svg-captcha": "^1.4.0"
+  }
+}
