@@ -8,7 +8,7 @@ try {
     if(req.headers['user-agent'] == 'Mozilla/5.0 (compatible; Discordbot/2.0; +https://discordapp.com)') return;
       
       const id = req.params.sessionId
-      res.cookie("test", "doesnttrack")
+
       if (!id) return res.status(400).send(`
         <html>
                 <head>
