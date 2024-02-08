@@ -254,7 +254,7 @@ try {
               })
               setTimeout(() =>{
                 await member.roles.remove(role)
-              })
+              }, 86400000)
             }
 
           }
