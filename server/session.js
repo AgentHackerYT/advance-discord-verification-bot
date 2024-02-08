@@ -125,14 +125,14 @@ try {
       if (!member) return res.send("Error Try Again")
 
       //if(!db.get(`role_${guild.id}`)) return member.send({content:`${guild.name} has not set me up yet`});
-
-      const role = await guild.roles.cache.find(r => r.id == db.get(`${guild.id}`).role)
+      const roo = await db.get(`${guild.id}`)
+      const role = await guild.roles.cache.find(r => r.id == roo.role)
 
       db.delete(id)
       var i = 0
       member.roles.cache.forEach(async (roles) => {
         try {
-          if (roles.id == "1012259962619187291") {
+          if (roles.id == role.id) {
 
             member.send({
               "content": `You Already Have The Role Set for verification in ${guild.name}`
@@ -251,6 +251,9 @@ try {
               await member.roles.add(role)
               await member.send({
                 content: `${member.user.username}, You Have been Successfully Verified, Now you can access ${guild.name}`
+              })
+              setTimeout(() =>{
+                await member.roles.remove(role)
               })
             }
 
