@@ -253,7 +253,7 @@ try {
                 content: `${member.user.username}, You Have been Successfully Verified, Now you can access ${guild.name}`
               })
               //setTimeout(async() =>{
-                await member.roles.remove(role)
+                //await member.roles.remove(role)
               //}, 86400000)
             }
 
